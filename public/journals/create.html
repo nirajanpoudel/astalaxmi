@@ -1,0 +1,54 @@
+<div class="container">
+	<form action="" ng-submit="save()" >
+		<div class="from-group">
+			<label for="">Description</label>
+			<input type="text" value="" class="form-control" name="description">
+		</div>
+		<div class="from-group">
+				<label for="">Date</label>
+				<input type="text" class="form-control" value="" name="date">
+		</div>
+		<div class="panel panel-danger" >
+				<div class="panel-head">
+					Transaction
+				</div>
+				<div class="panel-body">
+				<table class="table table-bordered">
+				<tr>
+					<td>Account</td>
+					<td>Description</td>
+					<td>Debit</td>
+					<td>Credit</td>
+					<td></td>
+				</tr>
+				<tbody>
+				
+
+				<tr ng-repeat="item in input_items">
+					<td>
+						<select class="form-control" ng-model="{{item.select}}" id="">
+						<option value="">--Select--</option>
+						
+						<optgroup label="">
+							
+							</optgroup>
+						</optgroup>
+							
+						
+						</select>
+					</td>
+					<td><input type="text" ng-model="{{item.description}}" class="form-control"></td>
+					<td width="200"><input type="text" ng-model="{{item.debit}}" class="form-control"></td>
+					<td width="200"><input type="text" ng-model="{{item.credit}}" class="form-control"></td>
+					<td><a href="" ng-click="removeItem(index)" class="btn btn-danger">-</a></td>
+				</tr>
+
+				</tbody>
+			</table>
+			<span class="btn btn-add btn-primary" ng-click="add()">+</span>
+		</div>
+		<div>
+			<button > Save </button>
+		</div>
+	</form>
+</div>

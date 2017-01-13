@@ -1,0 +1,17 @@
+<div class="container">
+	<a href="journals/create" class="btn btn-success">Create</a>
+	<table class="table">
+		<tr>
+			<th>Description</th>
+			<th>Date</th>
+			<th>Action</th>
+		</tr>
+	
+		<tr ng-repeat="j in journals">
+			<td>{{j.description}}</td>
+			<td>{{j.date}}</td>
+			<td><a href="">edit</a></td>
+		</tr>
+		
+	</table>
+	</div>
